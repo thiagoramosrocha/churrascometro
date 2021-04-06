@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt">
+https://github.com/thiagoramosrocha/churrascometro<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/Google-Noto-Emoji-Food-Drink-32380-cut-of-meat.ico type=" type="image/x-icon">
+    <link rel="icon" href="./assets/Google-Noto-Emoji-Food-Drink-32380-cut-of-meat.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
     <title>Churrascometro</title>
@@ -12,11 +12,18 @@
 <body>
 
     <div class="container"> 
+        <div class="im">
         <img src="./assets/logo-churras3-3.png" alt="">
-        <input id="adultos" name="adultos" type="number" placeholder="Adultos">
+    </div>
+    <div class="in">
+        <input id="adultos" name="adultos" onfucus="this.style.backgroundColor='#e480c1'" type="number" placeholder="Adultos">
         <input id="criancas" name="criancas" type="number" placeholder="Crianças">
         <input id="duracao" name="duracao" type="number" placeholder="Duracao(h)">
+    </div>
+    <div class="bu">
         <button class="button1" onclick="calcular()"> <b>CALCULAR</b></button>
+
+    </div>
 
         <div id="resultado">
 

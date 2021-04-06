@@ -14,16 +14,26 @@ let resultado = document.getElementById("resultado")
 
 function carnePP(duracao){
     if (duracao>=6){
-        return 650;
+        return 500;
     }else{
-        return 400;
+        return 250;
     }
 }
+
+function lingPP(duracao){
+    if (duracao>=6){
+        return 150;
+    }else{
+        return 50;
+    }
+}
+
+
 function cervejaPP(duracao){
     if (duracao>=6){
-        return 2000;
+        return 1500;
     }else{
-        return 1200;
+        return 1000;
     }
 }
 
@@ -43,13 +53,16 @@ function calcular(){
     let duracao = inputDuracao.value;
     
     let qtTotalCarne = carnePP(duracao)*adultos+(carnePP(duracao)/2*criancas);
+
+    let qtTotalling = lingPP(duracao)*adultos+(lingPP(duracao)/2*criancas);
         
     let qtTotalCerveja = cervejaPP(duracao)*adultos;
 
     let qtTotalBebidas = bebidasPP(duracao)*adultos+(bebidasPP(duracao)/2*criancas);
     
     resultado.innerHTML=`<p>${qtTotalCarne/1000}kg de Carne</p>`
+    resultado.innerHTML+=`<p>${qtTotalling/1000}kg de Linguiça</p>`
     resultado.innerHTML +=`<p>${Math.ceil(qtTotalCerveja/355)} Latas de Cerveja</p>`
-    resultado.innerHTML+=`<p>${Math.ceil(qtTotalBebidas/2000)} Garrafas de Regrigerante </p>`
+    resultado.innerHTML+=`<p>${Math.ceil(qtTotalBebidas/2000)} Garrafas(2l) de Regrigerante </p>`
     resultado.innerHTML+=`<p>${Math.ceil(qtTotalBebidas/4000)} Garrafas de Água </p>`
 }
